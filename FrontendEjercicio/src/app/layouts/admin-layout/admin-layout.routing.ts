@@ -11,6 +11,7 @@ import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {LoginComponent} from '../../views/Usuario/login/login.component'
 import {AuthGuard  } from "../../auth/auth.guard";
 import { ProductListComponent } from 'app/views/product-list/product-list.component';
+import { ListVentasComponent } from 'app/views/Venta/list-ventas/list-ventas.component';
 
 
 export const AdminLayoutRoutes: Routes = [
@@ -61,6 +62,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'productos',      component: ProductListComponent},
+    { path: 'ventas-list',     component: ListVentasComponent },
     { path: 'typography',     component: TypographyComponent },
     { path: 'icons',          component: IconsComponent },
     { path: 'maps',           component: MapsComponent },
