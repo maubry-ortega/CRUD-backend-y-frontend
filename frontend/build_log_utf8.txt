@@ -1,0 +1,1582 @@
+﻿
+> frontend@0.0.0 build
+> ng build
+
+[33mÔØ»[39m Building...
+[32mÔ£ö[39m Building...
+Application bundle generation failed. [2.490 seconds] - 2025-11-26T21:53:26.704Z
+
+node.exe : 
+[1m[33m[33mÔû▓ [43;33m[
+[43;30mWARNING[43;33m][0
+m [1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+En C:\Program 
+Files\nodejs\npm.ps1: 29 
+Carácter: 3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~
+    + CategoryInfo         
+     : NotSpecified: ([1  
+  m[33m[33mÔ...gular-s   
+ ass][0m:String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+
+    src/assets/scss/core/mi
+xins/_utilities.scss:24:15:
+[37m      24 Ôöé     
+@return if([32m[37mabs($c
+olor-brightness - 
+$light-text-brightness) > 
+a...
+         ÔòÁ               
+ [32m^[0m
+
+
+  Passing percentage units 
+to the global abs() 
+function is deprecated.
+  In the future, this will 
+emit a CSS abs() function 
+to be resolved by the 
+browser.
+  To preserve current 
+behavior: math.abs(-2.56156
+86274509812%)
+  To emit a CSS abs() now: 
+abs(#{-2.5615686274509812%}
+)
+  More info: [4mhttps://sa
+ss-lang.com/d/abs-percent[
+0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/mi
+xins/_utilities.scss:24:65:
+[37m      24 Ôöé ...ess - 
+$light-text-brightness) > 
+[32m[37mabs($color-brightn
+ess - $dark-t...
+         ÔòÁ               
+                     
+[32m^[0m
+
+
+  Passing percentage units 
+to the global abs() 
+function is deprecated.
+  In the future, this will 
+emit a CSS abs() function 
+to be resolved by the 
+browser.
+  To preserve current 
+behavior: math.abs(2.561568
+6274509883%)
+  To emit a CSS abs() now: 
+abs(#{2.5615686274509883%})
+  More info: [4mhttps://sa
+ss-lang.com/d/abs-percent[
+0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_bootstrap-material
+-design-base.scss:28:25:
+[37m      28 Ôöé 
+$mdb-text-color-primary: [
+32m[37munquote("rgba(#{$rg
+b-black}, 0.87)") !def...
+         ÔòÁ               
+           [32m^[0m
+
+
+  Global built-in 
+functions are deprecated 
+and will be removed in 
+Dart Sass 3.0.0.
+  Use string.unquote 
+instead.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_bootstrap-material
+-design.scss:105:2:
+[37m      105 Ôöé   [32m
+[37mlighten($bmd-switch-han
+dle-checked-bg, 28%),
+          ÔòÁ   [32m^[0m
+
+
+  lighten() is deprecated. 
+Suggestions:
+  
+  color.scale($color, 
+$lightness: 48.406779661%)
+  color.adjust($color, 
+$lightness: 28%)
+  
+  More info: [4mhttps://sa
+ss-lang.com/d/color-functio
+ns[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:318:25
+:
+[37m      318 Ôöé 
+$gray-darker:            [
+32m[37mlighten($gray-base,
+ 13.5%) !default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  Global built-in 
+functions are deprecated 
+and will be removed in 
+Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:318:25
+:
+[37m      318 Ôöé 
+$gray-darker:            [
+32m[37mlighten($gray-base,
+ 13.5%) !default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  lighten() is deprecated. 
+Suggestions:
+  
+  color.scale($color, 
+$lightness: 13.5%)
+  color.adjust($color, 
+$lightness: 13.5%)
+  
+  More info: [4mhttps://sa
+ss-lang.com/d/color-functio
+ns[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:319:25
+:
+[37m      319 Ôöé 
+$gray-dark:              [
+32m[37mlighten($gray-base,
+ 20%) !default;   // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  Global built-in 
+functions are deprecated 
+and will be removed in 
+Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:319:25
+:
+[37m      319 Ôöé 
+$gray-dark:              [
+32m[37mlighten($gray-base,
+ 20%) !default;   // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  lighten() is deprecated. 
+Suggestions:
+  
+  color.scale($color, 
+$lightness: 20%)
+  color.adjust($color, 
+$lightness: 20%)
+  
+  More info: [4mhttps://sa
+ss-lang.com/d/color-functio
+ns[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:320:25
+:
+[37m      320 Ôöé $gray:  
+                 [32m[37m
+lighten($gray-base, 33.5%) 
+!default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  Global built-in 
+functions are deprecated 
+and will be removed in 
+Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:320:25
+:
+[37m      320 Ôöé $gray:  
+                 [32m[37m
+lighten($gray-base, 33.5%) 
+!default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  lighten() is deprecated. 
+Suggestions:
+  
+  color.scale($color, 
+$lightness: 33.5%)
+  color.adjust($color, 
+$lightness: 33.5%)
+  
+  More info: [4mhttps://sa
+ss-lang.com/d/color-functio
+ns[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:322:25
+:
+[37m      322 Ôöé 
+$gray-lighter:           [
+32m[37mlighten($gray-base,
+ 93.5%) !default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  Global built-in 
+functions are deprecated 
+and will be removed in 
+Dart Sass 3.0.0.
+  Use color.adjust instead.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/core/va
+riables/_colors.scss:322:25
+:
+[37m      322 Ôöé 
+$gray-lighter:           [
+32m[37mlighten($gray-base,
+ 93.5%) !default; // ...
+          ÔòÁ              
+            [32m^[0m
+
+
+  lighten() is deprecated. 
+Suggestions:
+  
+  color.scale($color, 
+$lightness: 93.5%)
+  color.adjust($color, 
+$lightness: 93.5%)
+  
+  More info: [4mhttps://sa
+ss-lang.com/d/color-functio
+ns[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/materia
+l-dashboard.scss:20:9:
+[37m      20 Ôöé  @import 
+[32m[37m"core/variables";
+         ÔòÁ          
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/materia
+l-dashboard.scss:21:9:
+[37m      21 Ôöé  @import 
+[32m[37m"core/mixins";
+         ÔòÁ          
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/materia
+l-dashboard.scss:22:9:
+[37m      22 Ôöé  @import 
+[32m[37m"bootstrap/scss/b
+ootstrap";
+         ÔòÁ          
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/materia
+l-dashboard.scss:26:9:
+[37m      26 Ôöé  @import 
+[32m[37m"core/buttons";
+         ÔòÁ          
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[33mÔû▓ [43;33m[[43;30mW
+ARNING[43;33m][0m 
+[1mDeprecation[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    src/assets/scss/materia
+l-dashboard.scss:27:9:
+[37m      27 Ôöé  @import 
+[32m[37m"core/checkboxes"
+;
+         ÔòÁ          
+[32m^[0m
+
+
+  Sass @import rules are 
+deprecated and will be 
+removed in Dart Sass 3.0.0.
+  
+  More info and automated 
+migrator: [4mhttps://sass-
+lang.com/d/import[0m
+
+  The plugin 
+"angular-sass" was 
+triggered by this import
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+[39m[22m
+[1m[31m[31mX [41;31m[[
+41;97mERROR[41;31m][0m 
+[1mTS2307: Cannot find 
+module 
+'environments/environment' 
+or its corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/Services/Produc
+tos/producto.service.ts:4:2
+8:
+[37m      4 Ôöé import { 
+environment } from [32m'en
+vironments/environment'[37
+m;
+        ÔòÁ                
+             [32m~~~~~~~~~
+~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6002: This import 
+contains errors, which may 
+affect components that 
+depend on this 
+NgModule.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:32:4:
+[37m      32 Ôöé     
+[32mComponentsModule[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+AppComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:50:4:
+[37m      50 Ôöé     
+[32mAppComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+AdminLayoutComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:51:4:
+[37m      51 Ôöé     [32m
+AdminLayoutComponent[37m,
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+LoginComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:52:4:
+[37m      52 Ôöé     
+[32mLoginComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6001: The class 
+'ProductListComponent' is 
+listed in the declarations 
+of the NgModule 
+'AppModule', but is not a 
+directive, a component, or 
+a pipe. Either remove it 
+from the NgModule's 
+declarations, or add an 
+appropriate Angular 
+decorator.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:53:4:
+[37m      53 Ôöé     [32m
+ProductListComponent[37m,
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~~[0m
+
+  'ProductListComponent' 
+is declared here.
+
+    src/app/views/product-l
+ist/product-list.component.
+ts:14:13:
+[37m      14 Ôöé export 
+class [32mProductListCompo
+nent[37m implements 
+OnInit {
+         ÔòÁ              
+[32m~~~~~~~~~~~~~~~~~~~~[0
+m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6001: The class 
+'ProductModalComponent' is 
+listed in the declarations 
+of the NgModule 
+'AppModule', but is not a 
+directive, a component, or 
+a pipe. Either remove it 
+from the NgModule's 
+declarations, or add an 
+appropriate Angular 
+decorator.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    
+src/app/app.module.ts:54:4:
+[37m      54 Ôöé     [32m
+ProductModalComponent[37m
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~~~[0m
+
+  'ProductModalComponent' 
+is declared here.
+
+    src/app/views/product-m
+odal/product-modal.componen
+t.ts:11:13:
+[37m      11 Ôöé export 
+class [32mProductModalComp
+onent[37m implements 
+OnInit {
+         ÔòÁ              
+[32m~~~~~~~~~~~~~~~~~~~~~[
+0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+FooterComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:15:4:
+[37m      15 Ôöé     
+[32mFooterComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+NavbarComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:16:4:
+[37m      16 Ôöé     
+[32mNavbarComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+SidebarComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:17:4:
+[37m      17 Ôöé     
+[32mSidebarComponent[37m
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6004: Can't be 
+exported from this 
+NgModule, as it must be 
+imported first[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:20:4:
+[37m      20 Ôöé     
+[32mFooterComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6004: Can't be 
+exported from this 
+NgModule, as it must be 
+imported first[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:21:4:
+[37m      21 Ôöé     
+[32mNavbarComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6004: Can't be 
+exported from this 
+NgModule, as it must be 
+imported first[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/components/comp
+onents.module.ts:22:4:
+[37m      22 Ôöé     
+[32mSidebarComponent[37m
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2339: Property 
+'Line' does not exist on 
+type 'typeof import("C:/Use
+rs/Admin/Documents/GitHub/C
+RUD-backend-y-frontend/fron
+tend/node_modules/chartist/
+dist/index")'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/dashboard/dashb
+oard.component.ts:87:41:
+[37m      87 Ôöé 
+...ailySalesChart = new Cha
+rtist.[32mLine[37m('#dail
+ySalesChart', dataDail...
+         ÔòÁ               
+                   
+[32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2339: Property 
+'Line' does not exist on 
+type 'typeof import("C:/Use
+rs/Admin/Documents/GitHub/C
+RUD-backend-y-frontend/fron
+tend/node_modules/chartist/
+dist/index")'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/dashboard/dashb
+oard.component.ts:110:45:
+[37m      110 Ôöé 
+...tedTasksChart = new Char
+tist.[32mLine[37m('#compl
+etedTasksChart', data...
+          ÔòÁ              
+                   
+[32m~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2339: Property 'Bar' 
+does not exist on type 
+'typeof import("C:/Users/Ad
+min/Documents/GitHub/CRUD-b
+ackend-y-frontend/frontend/
+node_modules/chartist/dist/
+index")'.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/dashboard/dashb
+oard.component.ts:144:43:
+[37m      144 Ôöé 
+...siteViewsChart = new Cha
+rtist.[32mBar[37m('#websi
+teViewsChart', datawe...
+          ÔòÁ              
+                    
+[32m~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+DashboardComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:35:4:
+[37m      35 Ôöé     [32m
+DashboardComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+UserProfileComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:36:4:
+[37m      36 Ôöé     [32m
+UserProfileComponent[37m,
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+TableListComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:37:4:
+[37m      37 Ôöé     [32m
+TableListComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+TypographyComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:38:4:
+[37m      38 Ôöé     [32m
+TypographyComponent[37m,
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+IconsComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:39:4:
+[37m      39 Ôöé     
+[32mIconsComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+MapsComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:40:4:
+[37m      40 Ôöé     
+[32mMapsComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+NotificationsComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:41:4:
+[37m      41 Ôöé     [32m
+NotificationsComponent[37m
+,
+         ÔòÁ     [32m~~~~~
+~~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG6008: Component 
+UpgradeComponent is 
+standalone, and cannot be 
+declared in an NgModule. 
+Did you mean to import it 
+instead?[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.module.t
+s:42:4:
+[37m      42 Ôöé     
+[32mUpgradeComponent[37m,
+         ÔòÁ     
+[32m~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2307: Cannot find 
+module 'app/views/product-l
+ist/product-list.component'
+ or its corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.routing.
+ts:13:37:
+[37m      13 Ôöé 
+...tComponent } from [32m'
+app/views/product-list/prod
+uct-list.component'[37m;
+         ÔòÁ               
+       [32m~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2307: Cannot find 
+module 'app/Services/Produc
+tos/producto.service' or 
+its corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/views/product-l
+ist/product-list.component.
+ts:2:32:
+[37m      2 Ôöé ...{ 
+ProductoService } from [32
+m'app/Services/Productos/pr
+oducto.service'[37m;
+        ÔòÁ                
+             [32m~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG2003: No suitable 
+injection token for 
+parameter 
+'productoService' of class 
+'ProductListComponent'.
+  Consider using the 
+@Inject decorator to 
+specify an injection 
+token.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/views/product-l
+ist/product-list.component.
+ts:24:12:
+[37m      24 Ôöé     
+private 
+[32mproductoService[37m: 
+ProductoService,
+         ÔòÁ             
+[32m~~~~~~~~~~~~~~~[0m
+
+  This type does not have 
+a value, so it cannot be 
+used as injection token.
+
+    src/app/views/product-l
+ist/product-list.component.
+ts:24:29:
+[37m      24 Ôöé     
+private productoService: 
+[32mProductoService[37m,
+         ÔòÁ               
+               
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2307: Cannot find 
+module 'app/Services/Produc
+tos/producto.service' or 
+its corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/views/product-m
+odal/product-modal.componen
+t.ts:3:32:
+[37m      3 Ôöé ...{ 
+ProductoService } from [32
+m'app/Services/Productos/pr
+oducto.service'[37m;
+        ÔòÁ                
+             [32m~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mNG2003: No suitable 
+injection token for 
+parameter 
+'productoService' of class 
+'ProductModalComponent'.
+  Consider using the 
+@Inject decorator to 
+specify an injection 
+token.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/views/product-m
+odal/product-modal.componen
+t.ts:18:12:
+[37m      18 Ôöé     
+private 
+[32mproductoService[37m: 
+ProductoService,
+         ÔòÁ             
+[32m~~~~~~~~~~~~~~~[0m
+
+  This type does not have 
+a value, so it cannot be 
+used as injection token.
+
+    src/app/views/product-m
+odal/product-modal.componen
+t.ts:18:29:
+[37m      18 Ôöé     
+private productoService: 
+[32mProductoService[37m,
+         ÔòÁ               
+               
+[32m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mTS2307: Cannot find 
+module '@angular/platform-b
+rowser-dynamic' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/main.ts:2:39:
+[37m      2 Ôöé ... 
+platformBrowserDynamic } 
+from [32m'@angular/platfor
+m-browser-dynamic'[37m;
+        ÔòÁ                
+                   [32m~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "@angular/anima
+tions/browser"[0m
+
+    node_modules/@angular/p
+latform-browser/fesm2022/an
+imations.mjs:10:20:
+[37m      10 Ôöé import * 
+as i1 from [32m'@angular/a
+nimations/browser'[37m;
+         ÔòÁ               
+      [32m~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~[0m
+
+  You can mark the path "@a
+ngular/animations/browser" 
+as external to exclude it 
+from the bundle, which 
+will remove this error and 
+leave the unresolved path 
+in the bundle.
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "app/views/prod
+uct-list/product-list.compo
+nent"[0m
+
+    src/app/layouts/admin-l
+ayout/admin-layout.routing.
+ts:13:37:
+[37m      13 Ôöé 
+...tComponent } from [32m'
+app/views/product-list/prod
+uct-list.component'[37m;
+         ÔòÁ               
+       [32m~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~[0m
+
+  You can mark the path "ap
+p/views/product-list/produc
+t-list.component" as 
+external to exclude it 
+from the bundle, which 
+will remove this error and 
+leave the unresolved path 
+in the bundle.
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "~@fortawesome/
+fontawesome-free/css/all.cs
+s"[0m [1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/app.component.c
+ss:1:8:
+[37m      1 Ôöé @import [
+32m'~@fortawesome/fontaweso
+me-free/css/all.css'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~[0m
+
+  You can mark the path "~@
+fortawesome/fontawesome-fre
+e/css/all.css" as external 
+to exclude it from the 
+bundle, which will remove 
+this error and leave the 
+unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "~bootstrap/dis
+t/css/bootstrap.css"[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/dashboard/dashb
+oard.component.css:1:8:
+[37m      1 Ôöé @import [
+32m"~bootstrap/dist/css/boo
+tstrap.css"[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~[0m
+
+  You can mark the path "~b
+ootstrap/dist/css/bootstrap
+.css" as external to 
+exclude it from the 
+bundle, which will remove 
+this error and leave the 
+unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "~bootstrap-ico
+ns/font/bootstrap-icons.css
+"[0m [1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/views/Usuario/l
+ogin/login.component.css:1:
+8:
+[37m      1 Ôöé @import [
+32m"~bootstrap-icons/font/b
+ootstrap-icons.css"[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~[0m
+
+  You can mark the path "~b
+ootstrap-icons/font/bootstr
+ap-icons.css" as external 
+to exclude it from the 
+bundle, which will remove 
+this error and leave the 
+unresolved path in the 
+bundle.
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m 
+[1mUndefined mixin.
+   ÔòÀ
+7  Ôöé Ôöî   @include 
+hover {
+8  Ôöé Ôöé     color: 
+$color;
+9  Ôöé Ôöé     
+background-color: 
+$focus-background;
+10 Ôöé Ôöé     
+border-color: 
+$focus-border;
+11 Ôöé Ôöö   }
+   ÔòÁ
+  src\assets\scss\core\mixi
+ns\_buttons.scss 7:3    
+bmd-button-variant()
+  src\assets\scss\core\mixi
+ns\_buttons.scss 180:3  
+bmd-raised-button-variant()
+  src\assets\scss\core\mixi
+ns\_buttons.scss 214:5  
+bmd-raised-button-color()
+  src\assets\scss\core\_but
+tons.scss 25:3          
+@import
+  src\assets\scss\material-
+dashboard.scss 26:10    
+root stylesheet[0m 
+[1m[35m[plugin 
+angular-sass][0m
+
+    angular:styles/global:s
+tyles:3:8:
+[37m      3 Ôöé @import [
+32m'src/assets/scss/materia
+l-dashboard.scss'[37m;
+        ÔòÁ         [32m~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;97mERR
+OR[41;31m][0m [1mCould 
+not resolve "node_modules/c
+hartist/dist/chartist.js"[
+0m [1m[35m[plugin 
+angular-script-global][0m
+
+[39m[22m
