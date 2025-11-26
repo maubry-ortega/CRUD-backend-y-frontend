@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoService } from 'app/Services/Productos/producto.service';
+import { ProductoService } from '../../Services/Productos/producto.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductModalComponent } from '../product-modal/product-modal.component';
 import { MatPaginator } from '@angular/material/paginator';
@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit {
 
 
   constructor(
-    private productoService: ProductoService, 
+    private productoService: ProductoService,
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
@@ -29,8 +29,9 @@ export class ProductListComponent implements OnInit {
   }
 
   listarProductos(): void {
-    this.productoService.getProductos().subscribe(data => {this.productos.data = data;
-    this.productos.paginator = this.paginator;
+    this.productoService.getProductos().subscribe(data => {
+      this.productos.data = data;
+      this.productos.paginator = this.paginator;
     });
   }
 
@@ -45,7 +46,7 @@ export class ProductListComponent implements OnInit {
     })
   }
 
-  actualizarProducto( id: number ): void {
+  actualizarProducto(id: number): void {
     const dialogRef = this.dialog.open(ProductModalComponent, {
       width: '600px',
       data: { id }
