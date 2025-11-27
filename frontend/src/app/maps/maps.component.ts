@@ -11,7 +11,8 @@ draggable?: boolean;
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
-  styleUrls: ['./maps.component.css']
+  styleUrls: ['./maps.component.css'],
+  standalone: false
 })
 export class MapsComponent implements OnInit {
 

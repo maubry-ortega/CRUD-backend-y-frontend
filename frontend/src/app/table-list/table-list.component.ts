@@ -4,7 +4,8 @@ import { LoginService } from '../../app/Services/Usuario/login.service';
 @Component({
   selector: 'app-table-list',
   templateUrl: './table-list.component.html',
-  styleUrls: ['./table-list.component.css']
+  styleUrls: ['./table-list.component.css'],
+  standalone: false
 })
 export class TableListComponent implements OnInit {
   usuarios: any[] = [];
