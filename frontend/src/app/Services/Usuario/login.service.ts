@@ -18,8 +18,8 @@ export class LoginService {
 
  
 
-registrarUsuario(formData: FormData, ): Observable<any> {
-  return this.httpClient.post(`${this.baseUrl}crearUsuario`, formData);
+registrarUsuario(userData: any): Observable<any> {
+  return this.httpClient.post(`${this.baseUrl}crearUser`, userData);
 }
 
 

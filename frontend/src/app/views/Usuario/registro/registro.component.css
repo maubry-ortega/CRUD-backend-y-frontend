@@ -1,0 +1,242 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+.card .input-group input[type="text"],
+.card .input-group input[type="password"],
+.card .input-group input[type="email"] {
+  border: 1px solid rgb(17, 17, 71) !important;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.card .input-group .input-group-text {
+  background-color: transparent;
+  border: none;
+}
+
+.card .input-group .input-group-prepend,
+.card .input-group .input-group-append {
+  background-color: transparent;
+  position: absolute;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.card .input-group .input-group-prepend .input-group-text .bi {
+  margin: auto;
+}
+
+.card .input-group .input-group-append {
+  background-color: transparent;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  right: 0;
+  padding-right: 5px;
+}
+
+.card .input-group .input-group-append .input-group-text .bi {
+  margin: auto;
+  border-left: 1px solid rgb(17, 17, 71);
+  padding-left: 10px;
+  z-index: 1000;
+}
+
+.card .btn-primary {
+  background-color: rgb(17, 17, 71) !important;
+  border-color: blue !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card .card-header h5 .main-title {
+  color: rgb(17, 17, 71) !important;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.error-message {
+  color: red;
+  margin-top: 5px;
+}
+
+.success-message {
+  color: green;
+  margin-top: 5px;
+}
+
+.btn-login {
+  color: rgb(17, 17, 71);
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.btn-login:hover {
+  color: #026ac4;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-top: 50px;
+  }
+  .card .col-md-4 {
+    max-width: 80%;
+  }
+}
+
+.superior {
+  background-color: rgb(255, 255, 255);
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+}
+
+.inferior {
+  background: linear-gradient(135deg, #01335e, #026ac4);
+  height: 50vh;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 500px;
+}
+
+.content-card {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-around;
+  text-align: center;
+  align-items: baseline;
+}
+
+.content-card .card:hover {
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.content_mensaje {
+  width: 90%;
+  top: -120px;
+  margin: auto;
+  padding: 150px;
+  color: rgb(11, 9, 85);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.content_float {
+  position: absolute;
+  display: flex;
+  top: 50vh;
+  right: 0;
+  width: 100%;
+  justify-content: space-around;
+  margin: auto;
+  z-index: 2;
+  height: auto;
+  background-color: transparent;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 400px;
+    margin-top: -160px;
+    position: relative;
+    transition: none;
+  }
+  .div {
+    background-color: #01335e;
+    margin: auto;
+  }
+  .content_float {
+    margin-right: -5px;
+    margin-left: 100px;
+  }
+}
+
+.card {
+  margin-top: -160px;
+}
+
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #01335e, #026ac4);
+  animation: move 5s infinite alternate;
+}
+
+.circle1 {
+  top: 10%;
+  left: 10%;
+  animation: move1 5s infinite alternate;
+}
+
+.circle2 {
+  top: 20%;
+  left: 60%;
+  animation: move2 4s infinite alternate;
+}
+
+.circle3 {
+  top: 50%;
+  left: 30%;
+  animation: move3 6s infinite alternate;
+}
+
+.circle4 {
+  top: 70%;
+  left: 80%;
+  animation: move4 5s infinite alternate;
+}
+
+.circle5 {
+  top: 80%;
+  left: 20%;
+  animation: move5 7s infinite alternate;
+}
+
+@keyframes move1 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(20px, -50px); }
+}
+
+@keyframes move2 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-70px, 20px); }
+}
+
+@keyframes move3 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(15px, -15px); }
+}
+
+@keyframes move4 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-15px, 20px); }
+}
+
+@keyframes move5 {
+  from { transform: translate(0, 0); }
+  to { transform: translate(20px, -10px); }
+}

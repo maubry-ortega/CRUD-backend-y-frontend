@@ -103,6 +103,19 @@ body {
   color: red;
 }
 
+.btn-registro {
+  color: rgb(17, 17, 71);
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.btn-registro:hover {
+  color: #026ac4;
+  text-decoration: underline;
+}
+
 /* Estilos específicos para hacer el formulario responsive */
 @media (max-width: 768px) {
   .card {

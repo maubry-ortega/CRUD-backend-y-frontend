@@ -8,6 +8,7 @@ import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {LoginComponent} from '../app/views/Usuario/login/login.component'
+import {RegistroComponent} from '../app/views/Usuario/registro/registro.component'
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { JwtModule } from '@auth0/angular-jwt';
 import {AuthInterceptor} from './Services/Usuario/auth.interceptor';
@@ -49,6 +50,7 @@ import { PersonalizaIntlService } from './Services/Productos/personaliza-intl.se
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
+    RegistroComponent,
     ProductListComponent,
     ProductModalComponent
   ],

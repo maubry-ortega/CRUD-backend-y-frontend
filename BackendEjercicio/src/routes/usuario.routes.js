@@ -17,8 +17,8 @@ import { validateTokenMiddleware } from '../middleware/VerificadorToken.js';
 
 //metodos para ejecutar la tabla usuarios
 router.get('/listarUsuarios', validateTokenMiddleware, ListUsersC);
-router.post('/crearUser', CreateUserC); -
-    router.put('/actualizarUsers/:id', UpdateUserC);
+router.post('/crearUser', CreateUserC);
+router.put('/actualizarUsers/:id', UpdateUserC);
 router.post('/login', LoginC)
 router.post('/cerrarSesion', LogoutC);
 

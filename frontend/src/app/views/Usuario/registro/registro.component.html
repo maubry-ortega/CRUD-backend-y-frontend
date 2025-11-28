@@ -9,7 +9,6 @@
     </div>
   </div>
   <div class="inferior">
-  
   </div>
   <div class="content_float">
     <div class="contenedor2">
@@ -17,8 +16,7 @@
         <div class="card shadow" style="width:500px;">
           <div class="card-header bg-white">
             <h5 class="text-center">
-              <span class="main-title">Ingrese sus credenciales</span><br>
-              <span class="main-title">de ingreso</span>
+              <span class="main-title">Crear una cuenta</span>
             </h5>
           </div>
           <div class="card-body">
@@ -27,14 +25,14 @@
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
-                      <i class="bi bi-person"></i>
+                      <i class="bi bi-envelope"></i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" id="email" [(ngModel)]="user.email" name="email"
+                  <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email"
                     placeholder="Correo electrónico">
                 </div>
               </div>
-              <div class="mb-3 position-relative">
+              <div class="mb-2 position-relative">
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -50,13 +48,25 @@
                     </span>
                   </div>
                 </div>
+              </div>
+              <div class="mb-3 position-relative">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="bi bi-lock-fill"></i>
+                    </span>
+                  </div>
+                  <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="confirmarContrasena"
+                    [(ngModel)]="user.confirmarContrasena" name="confirmarContrasena" placeholder="Confirmar contraseña">
+                </div>
                 <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+                <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-sm d-block mx-auto">Ingresar</button>
+              <button type="submit" class="btn btn-primary btn-sm d-block mx-auto">Registrarse</button>
               <div class="text-center mt-3">
-                <span class="text-muted">¿No tienes cuenta?</span>
-                <a routerLink="/registro" class="btn-registro">Registrarse</a>
+                <span class="text-muted">¿Ya tienes cuenta?</span>
+                <a routerLink="/" class="btn-login">Iniciar sesión</a>
               </div>
             </form>
           </div>
@@ -64,5 +74,4 @@
       </div>
     </div>
   </div>
-
 </div>
