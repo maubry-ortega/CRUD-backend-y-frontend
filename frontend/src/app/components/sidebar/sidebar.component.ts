@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
-declare const $: any;
-declare interface RouteInfo {
+interface RouteInfo {
     path: string;
     title: string;
     icon: string;
     class: string;
 }
+
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'dashboard', class: '' },
-    { path: '/user-profile', title: 'User Profile',  icon:'person', class: '' },
+    { path: '/Panel', title: 'Dashboard',  icon: 'dashboard', class: '' },
     { path: '/productos', title: 'Gestionar Productos', icon: 'content_paste', class: ''},
-    { path: '/maps', title: 'Maps',  icon:'location_on', class: '' },
-    { path: '/notifications', title: 'Notifications',  icon:'notifications', class: '' },
-    { path: '/upgrade', title: 'Upgrade to PRO',  icon:'unarchive', class: 'active-pro' },
 ];
 
 @Component({
@@ -23,17 +19,9 @@ export const ROUTES: RouteInfo[] = [
   standalone: false
 })
 export class SidebarComponent implements OnInit {
-  menuItems: any[];
-
-  constructor() { }
+  menuItems: RouteInfo[] = [];
 
   ngOnInit() {
-    this.menuItems = ROUTES.filter(menuItem => menuItem);
+    this.menuItems = ROUTES;
   }
-  isMobileMenu() {
-      if ($(window).width() > 991) {
-          return false;
-      }
-      return true;
-  };
 }

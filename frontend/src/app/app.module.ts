@@ -1,14 +1,14 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {LoginComponent} from '../app/views/Usuario/login/login.component'
-import { JwtHelperService, JWT_OPTIONS  } from '@auth0/angular-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { JwtModule } from '@auth0/angular-jwt';
 import {AuthInterceptor} from './Services/Usuario/auth.interceptor';
 import {LoginService} from './Services/Usuario/login.service';
@@ -21,14 +21,13 @@ import { ProductModalComponent } from './views/product-modal/product-modal.compo
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorIntl } from '@angular/material/paginator';
-import { PersonalizaIntlService } from './Services/Productos/personaliza-intl.service'; // Ajusta la ruta según donde lo hayas guardado
+import { PersonalizaIntlService } from './Services/Productos/personaliza-intl.service';
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
+    CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
     ComponentsModule,
     RouterModule,
     AppRoutingModule,
@@ -54,6 +53,7 @@ import { PersonalizaIntlService } from './Services/Productos/personaliza-intl.se
     ProductModalComponent
   ],
   providers: [
+    provideHttpClient(withInterceptorsFromDi()),
     JwtHelperService,
     LoginService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
