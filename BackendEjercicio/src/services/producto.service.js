@@ -32,7 +32,7 @@ const productoService = {
 
 
         try {
-            const productosId = await Producto.findById(id);
+            const [productosId] = await Producto.findById(id);
             return productosId;
         } catch (error) {
             throw new Error('Error al obtener el producto ' + error.message)

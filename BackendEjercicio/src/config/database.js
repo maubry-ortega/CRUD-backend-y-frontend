@@ -32,6 +32,15 @@ pool.query('SELECT 1 + 1 AS solution', function (err, rows) {
         return;
     }
     console.log('Conexión exitosa a MySQL en la nube:', rows[0].solution);
+
+    // Query to show tables
+    pool.query('SHOW TABLES', (err, tables) => {
+        if (err) {
+            console.error('Error al obtener la lista de tablas:', err);
+            return;
+        }
+        console.log('Tablas encontradas en la base de datos:', tables.map(t => t[`Tables_in_${process.env.DB_NAME}`]));
+    });
 });
 
 export default pool.promise();

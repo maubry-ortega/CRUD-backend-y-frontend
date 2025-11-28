@@ -3,7 +3,7 @@ import pool from '../config/database.js';
 const producto = {
 
     findAll: async function () {
-        return await pool.execute('SELECT * FROM producto');
+        return await pool.execute('SELECT * FROM PRODUCTO');
     },
 
     create: async function ({ Nombre, Descripcion, Precio, Stock, IdTienda }) {
@@ -12,7 +12,7 @@ const producto = {
     },
 
     findById: async function (id) {
-        return await pool.execute('SELECT * FROM producto WHERE id = ?', [id]);
+        return await pool.execute('SELECT * FROM PRODUCTO WHERE id = ?', [id]);
     },
 
     update: async function (id, { Nombre, Descripcion, Precio, Stock, IdTienda }) {
@@ -20,7 +20,7 @@ const producto = {
     },
 
     delete: async function (id) {
-        return await pool.execute('DELETE FROM producto WHERE id = ?', [id]);
+        return await pool.execute('DELETE FROM PRODUCTO WHERE id = ?', [id]);
     }
 }
 
