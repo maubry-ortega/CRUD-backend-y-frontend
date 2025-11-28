@@ -1,11 +1,11 @@
-const RolUsuario = require('../models/rol.model');
+import RolUsuario from '../models/rol.model.js';
 
 
-const CrearRol = async function(rolData) {
-    if ( !rolData.rol ){
+export const CrearRol = async function (rolData) {
+    if (!rolData.rol) {
         throw new Error('Todos los campos son requeridos');
     }
-    try{
+    try {
         const rolCreado = await RolUsuario.create(rolData);
         return rolCreado;
     }
@@ -14,7 +14,7 @@ const CrearRol = async function(rolData) {
     }
 }
 
-// const ActulizarRol = async function(idRol, nuevoRol) {
+// export const ActulizarRol = async function(idRol, nuevoRol) {
 //     try{
 //         const rolActualizado = await RolUsuario.editRol(idRol, nuevoRol);
 //         if (!rolActualizado){
@@ -28,12 +28,12 @@ const CrearRol = async function(rolData) {
 
 // }
 
-const EditRol = async function(idRol, NuevoRol) {
-    try{
-      
-        const rolActualizado= {...idRol, ...NuevoRol}
+export const EditRol = async function (idRol, NuevoRol) {
+    try {
+
+        const rolActualizado = { ...idRol, ...NuevoRol }
         await RolUsuario.editRol(idRol, rolActualizado);
-        
+
         return rolActualizado;
     }
     catch (error) {
@@ -41,22 +41,15 @@ const EditRol = async function(idRol, NuevoRol) {
     }
 }
 
-const ListarUsuRol = async function (rolData) {
-    try{
+export const ListarUsuRol = async function (rolData) {
+    try {
         const roles = await RolUsuario.findAll(rolData);
         return roles;
     }
     catch (error) {
         throw error;
     }
-    
-}
 
-module.exports = {
-    CrearRol,
-    // ActulizarRol,
-    ListarUsuRol,
-    EditRol
 }
 
 

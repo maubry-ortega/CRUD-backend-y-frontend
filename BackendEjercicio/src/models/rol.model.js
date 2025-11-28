@@ -1,13 +1,13 @@
-const pool = require('../config/database');
-const mysql = require('mysql2');
+import pool from '../config/database.js';
+import mysql from 'mysql2';
 
 const Rol = {
-  findAll: async function() {
+  findAll: async function () {
     return await pool.execute('SELECT * FROM Rol');
   },
 
-  create: async function(rolData) {
-    if ( !rolData.rol ) {
+  create: async function (rolData) {
+    if (!rolData.rol) {
       throw new Error('Todos los campos son requeridos');
     }
 
@@ -16,11 +16,11 @@ const Rol = {
     return pool.execute(rol, [rolData.rol]);
   },
 
-  findByPk: async function(idRol) {
+  findByPk: async function (idRol) {
     return await pool.execute('SELECT * FROM Rol where idRol = ?', [idRol]);
   },
 
-  editRol: async function(idRol, nuevoRol) {
+  editRol: async function (idRol, nuevoRol) {
     try {
       const [result] = await pool.execute(
         `UPDATE Rol SET  rol = ? WHERE idRol = ?`,
@@ -35,7 +35,7 @@ const Rol = {
     }
   },
 
-  deleteRol: async function(idRol) {
+  deleteRol: async function (idRol) {
     try {
       const [result] = await pool.execute('DELETE FROM Rol WHERE idRol = ?', [idRol]);
       if (result.affectedRows === 0) {
@@ -48,4 +48,4 @@ const Rol = {
   }
 };
 
-module.exports = Rol;
+export default Rol;

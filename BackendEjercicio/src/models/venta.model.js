@@ -1,4 +1,4 @@
-const pool = require("../config/database");
+import pool from "../config/database.js";
 
 const Venta = {
   findAll: async () => {
@@ -18,7 +18,7 @@ const Venta = {
     ]);
   },
 
-  update: async (idVenta, {idUsuario, fechaVenta, total }) => {
+  update: async (idVenta, { idUsuario, fechaVenta, total }) => {
     return await pool.execute(
       "UPDATE Venta SET id_usuario = ?, fecha_venta = ?, total = ? WHERE id_venta = ?",
       [idUsuario, fechaVenta, total, idVenta]
@@ -30,4 +30,4 @@ const Venta = {
   }
 };
 
-module.exports = Venta;
+export default Venta;

@@ -1,6 +1,5 @@
 //consultas a la base de datos de mysql2 
-const pool = require('../config/database');
-const mysql = require('mysql2');
+import pool from '../config/database.js';
 
 const Usuario = {
     //funcion para mostrar todo de la tabla usuarios, funciona asincronica nos retorna una consulta
@@ -50,4 +49,4 @@ const Usuario = {
     }
 }
 
-module.exports = Usuario;
+export default Usuario;

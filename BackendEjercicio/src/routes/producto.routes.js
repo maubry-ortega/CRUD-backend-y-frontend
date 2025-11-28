@@ -1,13 +1,13 @@
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const {
-    crearProductoC, 
+import {
+    crearProductoC,
     ListarProductosC,
     ListarProductosIdC,
     ActualizarProductoC,
     EliminarProductoC
-} = require('../controllers/producto.controller')
+} from '../controllers/producto.controller.js';
 
 
 router.post('/crearProducto', crearProductoC);
@@ -17,4 +17,4 @@ router.put('/productos/:id', ActualizarProductoC);
 router.delete('/productos/:id', EliminarProductoC);
 
 
-module.exports = router
+export default router;

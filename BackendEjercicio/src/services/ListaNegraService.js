@@ -1,12 +1,11 @@
 
+import pool from '../config/database.js';
 
-const { pool } = require('../config/database');
-
-const listaNegraService = {
+export const listaNegraService = {
   async agregarToken(token) {
     try {
       const query = 'INSERT INTO listaNegra (token, created_at) VALUES (?, NOW())';
-      const result = await pool.promise().query(query, [token]);
+      const result = await pool.query(query, [token]);
 
       if (!result || result[0].affectedRows !== 1) {
         throw new Error('Error al agregar el token a la lista negra: No se afectó ninguna fila');
@@ -22,7 +21,7 @@ const listaNegraService = {
   async vaciarListaNegra() {
     try {
       const query = 'DELETE FROM listaNegra';
-      await pool.promise().query(query);
+      await pool.query(query);
       // console.log('Tabla listaNegra vaciada correctamente.');
     } catch (error) {
       console.error('Error al vaciar la tabla listaNegra:', error.message);
@@ -35,7 +34,7 @@ const listaNegraService = {
       // console.log('Token utilizado en la consulta:', token);
 
       const query = 'SELECT COUNT(*) AS count FROM listaNegra WHERE token = ?';
-      const [rows, fields] = await pool.promise().query(query, [token.toString()]);
+      const [rows, fields] = await pool.query(query, [token.toString()]);
 
       // console.log('Resultado de la consulta:', rows);
 
@@ -54,6 +53,4 @@ const listaNegraService = {
 setInterval(() => {
   listaNegraService.vaciarListaNegra()
     .catch(error => console.error('Error al vaciar la lista negra:', error));
-}, 3600 * 1000); 
-
-module.exports = { listaNegraService };
+}, 3600 * 1000);

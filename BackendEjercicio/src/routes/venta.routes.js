@@ -1,19 +1,19 @@
-const express = require("express");
-const router = express.Router();
+import { Router } from "express";
+const router = Router();
 
-const {
+import {
   CrearVentaC,
   ObtenerVentasC,
   ObtenerVentaPorIdC,
   ActualizarVentaC,
   EliminarVentaC,
-} = require("../controllers/venta.controller");
-const {
+} from "../controllers/venta.controller.js";
+import {
   validarObtenerVentaPorId,
   validarCrearVenta,
   validarActualizarVenta,
   validarEliminarVenta,
-} = require("../middleware/venta.validations");
+} from "../middleware/venta.validations.js";
 
 router.get("/obtenerVentas", ObtenerVentasC);
 router.get("/obtenerVentas/:idVenta", validarObtenerVentaPorId, ObtenerVentaPorIdC);
@@ -21,4 +21,4 @@ router.post("/crearVenta", validarCrearVenta, CrearVentaC);
 router.put("/actualizarVenta/:idVenta", validarActualizarVenta, ActualizarVentaC);
 router.delete("/eliminarVenta/:idVenta", validarEliminarVenta, EliminarVentaC);
 
-module.exports = router;
+export default router;

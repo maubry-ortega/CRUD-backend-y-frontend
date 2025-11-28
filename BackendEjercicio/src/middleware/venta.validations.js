@@ -1,7 +1,7 @@
 const validarObtenerVentaPorId = (req, res, next) => {
-    const {idVenta}  = req.params;
+    const { idVenta } = req.params;
     if (!idVenta) {
-        return res.status(400).json({ mensaje: `La venta con id = ${ idVenta }, no existe!` });
+        return res.status(400).json({ mensaje: `La venta con id = ${idVenta}, no existe!` });
     }
     next();
 }
@@ -11,11 +11,11 @@ const validarCrearVenta = (req, res, next) => {
     if (!idUsuario || !fechaVenta || !total) {
         return res.status(400).json({ error: 'Todos los campos son requeridos para crear una venta' });
     }
-    next();  
+    next();
 };
 
 const validarActualizarVenta = (req, res, next) => {
-    const {idVenta}  = req.params;
+    const { idVenta } = req.params;
     if (!idVenta) {
         return res.status(400).json({ error: 'El ID de la venta es requerido para actualizar' });
     }
@@ -23,18 +23,18 @@ const validarActualizarVenta = (req, res, next) => {
     if (!idVenta || !idUsuario || !fechaVenta || !total) {
         return res.status(400).json({ error: 'Todos los campos son requeridos para actualizar una venta' });
     }
-    next();  
+    next();
 };
 
 const validarEliminarVenta = (req, res, next) => {
-    const {idVenta}  = req.params;
+    const { idVenta } = req.params;
     if (!idVenta) {
         return res.status(400).json({ error: 'El ID de la venta es requerido para eliminar' });
     }
-    next(); 
+    next();
 };
 
-module.exports = {
+export {
     validarObtenerVentaPorId,
     validarCrearVenta,
     validarActualizarVenta,

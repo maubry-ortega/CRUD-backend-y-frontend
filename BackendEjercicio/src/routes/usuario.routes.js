@@ -1,27 +1,29 @@
 //define una ruta para la creación de usuarios en una aplicación Node.js utilizando el framework Express.
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
-const {
+import {
     //funciones del controller para la tabla usuarios
-    CrearUserC, 
-    ActualizarUserC, 
-    ListarUsuariosC,
-    GetUserByEmailC, BuscarUsuarioporid,
-    LoginC, cerrarSesionC
-} = require('../controllers/usuario.controller')
-const validarTokenMiddleware = require('../middleware/VerificadorToken')
+    CreateUserC,
+    UpdateUserC,
+    ListUsersC,
+    GetUserByEmailC,
+    GetUserByIdC,
+    LoginC,
+    LogoutC
+} from '../controllers/usuario.controller.js';
+import { validateTokenMiddleware } from '../middleware/VerificadorToken.js';
 
 
 //metodos para ejecutar la tabla usuarios
-router.get('/listarUsuarios', validarTokenMiddleware, ListarUsuariosC);
-router.post('/crearUser', CrearUserC);-
-router.put('/actualizarUsers/:id', ActualizarUserC);
+router.get('/listarUsuarios', validateTokenMiddleware, ListUsersC);
+router.post('/crearUser', CreateUserC); -
+    router.put('/actualizarUsers/:id', UpdateUserC);
 router.post('/login', LoginC)
-router.post('/cerrarSesion', cerrarSesionC);
+router.post('/cerrarSesion', LogoutC);
 
-router.get('/buscarUser/:id',BuscarUsuarioporid);
+router.get('/buscarUser/:id', GetUserByIdC);
 
-module.exports = router
+export default router;
 
 

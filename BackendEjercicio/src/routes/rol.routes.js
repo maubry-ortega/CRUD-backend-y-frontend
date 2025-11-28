@@ -1,14 +1,14 @@
 //define una ruta para la creación de usuarios en una aplicación Node.js utilizando el framework Express.
-const express = require('express');
-const router = express.Router();
+import { Router } from 'express';
+const router = Router();
 
 
-const {
+import {
     //funciones del controller pare la tabla rol
     EditRolC,
     CrearRolC,
     ListarUsuRolC
-} = require('../controllers/rol.controller')
+} from '../controllers/rol.controller.js';
 
 //metodos para ejecutar la tabla rol
 router.get('/listarUsuRol', ListarUsuRolC)
@@ -17,6 +17,6 @@ router.put('/actualizarRol/:id', EditRolC);
 
 
 
-module.exports = router
+export default router;
 
 

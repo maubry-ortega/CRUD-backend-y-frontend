@@ -1,13 +1,13 @@
 // vamos a ejecutar a traves de la libreria express
 // llamar rutas del puerto que se van ejecutar atraves del puerto q se quiera
 // usuarioRoutes constante que apartir de una cosnsulta me toma la ruta donde se necuentra usuairio.routes donde estan todas las rutas que se van a querer usar
-const express = require('express');
-const morgan = require('morgan')
-const cors = require('cors');
-const usuarioRoutes = require('../routes/usuario.routes')
-const RolRoutes = require('../routes/rol.routes')
-const ventaRoutes = require('../routes/venta.routes');
-const productosRoutes = require('../routes/producto.routes')
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import usuarioRoutes from '../routes/usuario.routes.js';
+import RolRoutes from '../routes/rol.routes.js';
+import ventaRoutes from '../routes/venta.routes.js';
+import productosRoutes from '../routes/producto.routes.js';
 
 // crear nuestra aplicacion express
 const Backend = express();
@@ -31,5 +31,5 @@ Backend.use(ventaRoutes);
 Backend.use(productosRoutes);
 
 
-Backend.set('port', process.env.PORT || port );
-module.exports = Backend
+Backend.set('port', process.env.PORT || port);
+export default Backend;

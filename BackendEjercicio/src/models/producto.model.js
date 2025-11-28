@@ -1,4 +1,4 @@
-const pool = require('../config/database');
+import pool from '../config/database.js';
 
 const producto = {
 
@@ -6,16 +6,16 @@ const producto = {
         return await pool.execute('SELECT * FROM producto');
     },
 
-    create: async function ( {Nombre, Descripcion, Precio, Stock, IdTienda} ) {
+    create: async function ({ Nombre, Descripcion, Precio, Stock, IdTienda }) {
 
-        return await pool.execute('INSERT INTO PRODUCTO (nombre, descripcion, precio, stock, id_tienda) VALUES (?, ?, ?, ?, ?)', [ Nombre, Descripcion, Precio, Stock, IdTienda ])        
+        return await pool.execute('INSERT INTO PRODUCTO (nombre, descripcion, precio, stock, id_tienda) VALUES (?, ?, ?, ?, ?)', [Nombre, Descripcion, Precio, Stock, IdTienda])
     },
 
-    findById: async function ( id ) {
-        return await pool.execute('SELECT * FROM producto WHERE id = ?', [ id ]);
+    findById: async function (id) {
+        return await pool.execute('SELECT * FROM producto WHERE id = ?', [id]);
     },
 
-    update: async function (id, {Nombre, Descripcion, Precio, Stock, IdTienda} ) {
+    update: async function (id, { Nombre, Descripcion, Precio, Stock, IdTienda }) {
         return await pool.execute('UPDATE PRODUCTO SET nombre = ?, descripcion = ?, precio = ?, stock = ?, id_tienda = ? WHERE id = ?', [Nombre, Descripcion, Precio, Stock, IdTienda, id]);
     },
 
@@ -24,4 +24,4 @@ const producto = {
     }
 }
 
-module.exports = producto;
+export default producto;
