@@ -7,13 +7,13 @@ const Usuario = {
         return await pool.execute('SELECT u.*, r.rol FROM Usuario u JOIN Rol r ON u.idRol = r.idRol');
     },
     create: async function (UsuarioData) {
-        if (!UsuarioData.identificacion || !UsuarioData.nombre || !UsuarioData.apellido || !UsuarioData.email || !UsuarioData.contrasena || !UsuarioData.direccion || !UsuarioData.fecha_nacimiento || !UsuarioData.idRol) {
+        if (!UsuarioData.nombre || !UsuarioData.apellido || !UsuarioData.email || !UsuarioData.password || !UsuarioData.idRol) {
             throw new Error('Todos los campos son requeridos...');
         }
 
-        const user = `INSERT INTO Usuario (identificacion, nombre, apellido, email, contrasena, direccion, fecha_nacimiento, idRol )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)`;
-        return pool.execute(user, [UsuarioData.identificacion, UsuarioData.nombre, UsuarioData.apellido, UsuarioData.email, UsuarioData.contrasena, UsuarioData.direccion, UsuarioData.fecha_nacimiento, UsuarioData.idRol]);
+        const user = `INSERT INTO Usuario (nombre, apellido, email, password, idRol)
+        VALUES (?, ?, ?, ?, ?)`;
+        return pool.execute(user, [UsuarioData.nombre, UsuarioData.apellido, UsuarioData.email, UsuarioData.password, UsuarioData.idRol]);
     },
     findOneUsuario: async function (id) {//devuelve un usuario específico por su ID.
         return await pool.execute('SELECT * FROM Usuario where idUsuario = ?', [id]);
@@ -25,8 +25,8 @@ const Usuario = {
     editUsuario: async function (idUsuario, NuevoUsuario) {//actualiza un usuario existente en la base de datos
         try {
             const [result] = await pool.execute(
-                `UPDATE Usuario SET identificacion = ?, nombre = ?, apellido = ?, email = ?, contrasena = ?, direccion = ?, fecha_nacimiento = ?, identificacion = ?  WHERE id = ?`,
-                [NuevoUsuario.identificacion, NuevoUsuario.nombre, NuevoUsuario.apellido, NuevoUsuario.email, NuevoUsuario.contrasena, NuevoUsuario.direccion, NuevoUsuario.fecha_nacimiento, NuevoUsuario.identificacion, idUsuario]
+                `UPDATE Usuario SET nombre = ?, apellido = ?, email = ?, password = ? WHERE idUsuario = ?`,
+                [NuevoUsuario.nombre, NuevoUsuario.apellido, NuevoUsuario.email, NuevoUsuario.password, idUsuario]
             );
             if (result.affectedRows === 0) {
                 throw new Error('No se encontró el usuario');
