@@ -12,8 +12,11 @@ export class RegistroComponent implements OnInit {
 
   showPassword: boolean = false;
   user = {
+    nombre: '',
+    apellido: '',
     email: '',
-    contrasena: '',
+    idRol: 2, // Default to Cliente/User
+    password: '',
     confirmarContrasena: ''
   };
   errorMessage: string = '';
@@ -32,19 +35,23 @@ export class RegistroComponent implements OnInit {
     this.errorMessage = '';
     this.successMessage = '';
 
-    if (!this.user.email || !this.user.contrasena || !this.user.confirmarContrasena) {
+    if (!this.user.nombre || !this.user.apellido ||
+      !this.user.email || !this.user.password || !this.user.confirmarContrasena) {
       this.errorMessage = 'Todos los campos son obligatorios';
       return;
     }
 
-    if (this.user.contrasena !== this.user.confirmarContrasena) {
+    if (this.user.password !== this.user.confirmarContrasena) {
       this.errorMessage = 'Las contraseñas no coinciden';
       return;
     }
 
     const userData = {
+      nombre: this.user.nombre,
+      apellido: this.user.apellido,
       email: this.user.email,
-      contrasena: this.user.contrasena
+      idRol: this.user.idRol,
+      password: this.user.password
     };
 
     this.loginService.registrarUsuario(userData).subscribe(response => {

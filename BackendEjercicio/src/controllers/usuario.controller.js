@@ -27,20 +27,18 @@ export const CreateUserC = async function (req, res) {
     try {
         // Validar campos requeridos
         validateRequiredFields([
-            'identificacion',
             'nombre',
             'apellido',
             'email',
-            'direccion',
-            'fecha_nacimiento',
+            'password',
             'idRol'
         ])(req, res, async () => {
 
             const userData = req.body; // Obtiene los datos del usuario
 
             // Validación manual adicional
-            if (!userData.identificacion || !userData.nombre || !userData.apellido ||
-                !userData.email || !userData.direccion || !userData.fecha_nacimiento ||
+            if (!userData.nombre || !userData.apellido ||
+                !userData.email || !userData.password ||
                 !userData.idRol) {
                 return res.status(400).json({ error: 'Todos los campos son requeridos' });
             }
@@ -57,8 +55,9 @@ export const CreateUserC = async function (req, res) {
 // Controlador para login
 export const LoginC = async function (req, res) {
     try {
-        await Login(req, res); // Llama al servicio de login
+        await loginService(req, res); // Llama al servicio de login
     } catch (error) {
+        console.error('Error en LoginC:', error);
         res.status(500).json({ error: error.message });
     }
 };

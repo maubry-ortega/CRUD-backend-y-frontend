@@ -21,6 +21,37 @@
           </div>
           <div class="card-body">
             <form (ngSubmit)="onSubmit()">
+              <!-- Nombre -->
+              <div class="mb-2">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  </div>
+                  <input type="text" class="form-control" [(ngModel)]="user.nombre" name="nombre" placeholder="Nombre">
+                </div>
+              </div>
+              <!-- Apellido -->
+              <div class="mb-2">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                  </div>
+                  <input type="text" class="form-control" [(ngModel)]="user.apellido" name="apellido"
+                    placeholder="Apellido">
+                </div>
+              </div>
+              <!-- Rol -->
+              <div class="mb-2">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="bi bi-person-gear"></i></span>
+                  </div>
+                  <select class="form-control" [(ngModel)]="user.idRol" name="idRol">
+                    <option [value]="1">Admin</option>
+                    <option [value]="2">Cliente</option>
+                  </select>
+                </div>
+              </div>
               <div class="mb-2">
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -40,7 +71,7 @@
                     </span>
                   </div>
                   <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="contrasena"
-                    [(ngModel)]="user.contrasena" name="contrasena" placeholder="Contraseña">
+                    [(ngModel)]="user.password" name="password" placeholder="Contraseña">
                   <div class="input-group-append">
                     <span class="input-group-text eye-icon" style="cursor: pointer;"
                       (click)="togglePasswordVisibility()">
@@ -57,7 +88,8 @@
                     </span>
                   </div>
                   <input [type]="showPassword ? 'text' : 'password'" class="form-control" id="confirmarContrasena"
-                    [(ngModel)]="user.confirmarContrasena" name="confirmarContrasena" placeholder="Confirmar contraseña">
+                    [(ngModel)]="user.confirmarContrasena" name="confirmarContrasena"
+                    placeholder="Confirmar contraseña">
                 </div>
                 <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
                 <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>

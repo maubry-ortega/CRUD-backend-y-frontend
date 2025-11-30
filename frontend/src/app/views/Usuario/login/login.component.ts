@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from "../../../Services/Usuario/login.service";
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +10,13 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  showPassword: boolean = false; 
+  showPassword: boolean = false;
   passwordFocused: boolean = false;
   user = {
     email: '',
-    contrasena: ''
+    password: ''
   };
-  errorMessage: string = ''; 
+  errorMessage: string = '';
 
   constructor(private loginService: LoginService, private router: Router) { }
 
@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   togglePasswordVisibility() {
-    this.showPassword = !this.showPassword; 
+    this.showPassword = !this.showPassword;
   }
 
   onPasswordFocus() {
@@ -41,16 +41,16 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     // Verifica si los campos están vacíos
-    if (!this.user.email || !this.user.contrasena) {
+    if (!this.user.email || !this.user.password) {
       this.errorMessage = 'Todos los campos son obligatorios';
       return;
     }
 
     this.loginService.iniciarSesion(this.user).subscribe(response => {
-        console.log('Inicio de sesión exitoso', response);
-        if (response) {
-          this.router.navigate(['/Panel']);
-        }
+      console.log('Inicio de sesión exitoso', response);
+      if (response) {
+        this.router.navigate(['/Panel']);
+      }
     }, error => {
       console.error('Error al iniciar sesión', error);
       if (error && error.error && error.error.message) {
@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
       } else {
         this.errorMessage = 'Usuario y Contraseña incorrectos';
       }
-      console.log('Mensaje de error:', this.errorMessage);       
+      console.log('Mensaje de error:', this.errorMessage);
     });
   }
 

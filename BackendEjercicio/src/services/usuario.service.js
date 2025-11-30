@@ -42,24 +42,26 @@ export const ListUsers = async function () {
 // ============================================
 export const CreateUser = async function (userData) {
     try {
+        console.log('Datos recibidos en CreateUser:', userData);
         if (!userData) {
             throw new Error('Todos los campos son requeridos');
         }
 
-        // Usar la identificación como contraseña inicial
-        const password = userData.identificacion;
+        // Usar la contraseña proporcionada
+        const password = userData.password;
 
         if (!password) {
             throw new Error('Error al generar la contraseña');
         }
 
         const encryptedPassword = await bcrypt.hash(password, 10);
-        userData.contrasena = encryptedPassword;
+        userData.password = encryptedPassword;
 
         const newUser = await Usuario.create(userData);
         return newUser;
 
     } catch (error) {
+        console.error('Error en CreateUser:', error);
         throw error;
     }
 };
@@ -69,10 +71,15 @@ export const CreateUser = async function (userData) {
 // Crear token JWT
 // ============================================
 export const CreateToken = async function (user) {
-    const { id, identificacion } = user;
+    const { idUsuario, email } = user;
 
-    const payload = { id, identificacion };
+    const payload = { id: idUsuario, email };
     const secret = process.env.JWT_SECRET;
+
+    if (!secret) {
+        throw new Error('JWT_SECRET no está definido en las variables de entorno');
+    }
+
     const options = { expiresIn: '3m' };
 
     const token = jwt.sign(payload, secret, options);
@@ -85,9 +92,10 @@ export const CreateToken = async function (user) {
 // ============================================
 export const loginService = async function (req, res) {
     try {
-        const { email, contrasena } = req.body;
+        const { email, password } = req.body;
+        console.log('Intento de login:', email);
 
-        if (!email || !contrasena) {
+        if (!email || !password) {
             return res.status(400).json({ error: 'Credenciales necesarias' });
         }
 
@@ -98,7 +106,7 @@ export const loginService = async function (req, res) {
         }
 
         const user = users[0];
-        const validPassword = await bcrypt.compare(contrasena, user.contrasena);
+        const validPassword = await bcrypt.compare(password, user.password);
 
         if (!validPassword) {
             return res.status(401).json({ error: 'Contraseña incorrecta' });
@@ -110,14 +118,17 @@ export const loginService = async function (req, res) {
             message: 'Inicio de sesión exitoso',
             token,
             user: {
-                id: user.id,
-                identificacion: user.identificacion
+                id: user.idUsuario,
+                email: user.email,
+                nombre: user.nombre,
+                apellido: user.apellido,
+                idRol: user.idRol
             }
         });
 
     } catch (error) {
-        console.error(error);
-        return res.status(500).json({ error: 'Error al iniciar sesión' });
+        console.error('Error en loginService:', error);
+        return res.status(500).json({ error: 'Error al iniciar sesión: ' + error.message });
     }
 };
 
